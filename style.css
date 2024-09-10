@@ -1,0 +1,322 @@
+body {
+
+    padding: 0;
+
+    margin: 0;
+
+    background: url(https://cdn.pixabay.com/photo/2018/01/19/23/03/heart-3093376_960_720.jpg);    
+
+    background-size: cover;
+
+}
+
+#presente{
+    align-items: center;
+
+    display: flex;
+
+    justify-content: center;
+}
+
+.title {
+
+ font-size: 50px;
+
+ text-align: center;
+
+ color: rgb(233, 85, 110);
+
+ font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#login {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    height: 100vh;
+
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+
+.card {
+
+    background-color: rgb(245, 148, 164);
+
+    padding: 40px;
+
+    border-radius: 2px;
+
+    width:280px;
+
+}
+
+.card-header {
+
+    padding-bottom: 50px;
+
+    opacity: 0.8;
+
+    color: #fff;
+
+}
+
+.card-header::after {
+
+
+    width: 20px;
+
+    height: 1px;
+
+    background-color: #fff;
+
+    display: block;
+
+    margin-top: 0px;
+
+    margin-left: -5px;
+
+}
+
+.card-content label {
+
+    color: #fff;
+
+    font-size: 12px;
+
+    opacity: 0.8;
+
+}
+
+.card-content-area {
+
+    display: flex;
+
+    flex-direction: column;
+
+    padding:10px 0;
+
+}
+
+.card-content-area input {
+
+    margin-top: 10px;
+
+    padding:0 5px;
+
+    background-color: transparent;
+
+    border:none;
+
+    border-bottom: 1px solid #e1e1e1;
+
+    outline: none;
+
+    color: #fff;
+
+}
+
+.card-footer {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+.card-footer .submit{
+
+    width: 100%;
+
+    height: 40px;
+
+    background-color: palevioletred;
+
+    border:none;
+
+    color:#e1e1e1;
+
+    margin: 10px 0;
+
+}
+
+.card-footer a {
+
+    text-align: center;
+
+    font-size: 12px;
+
+    opacity: 0.8;
+
+    color: #fff;
+
+    text-decoration: none;
+
+}
+
+.presente-conteiner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 20%;
+   
+}
+.presente-conteiner.active{
+    animation: Vibrar 1s ease forwards;
+}
+@keyframes Vibrar{
+    0%{
+      transform: scale(1,1);
+    }
+    25%{
+     transform: scale(.95,1.05);
+    }
+    50%{
+      transform: scale(1.1,.9);
+    }
+    70%{
+       transform: scale(.9,1.1);
+    }
+    100%{
+       transform: scale(1,1);
+    }
+}
+.presente-conteiner .caixa-presente{
+    position: absolute;
+    height: 200px;
+    width: 300px;
+    background: whitesmoke;
+    animation: Flutuar 4s ease infinite forwards;
+}
+
+.presente-conteiner .shadow.active{
+    animation: none;
+}
+
+@keyframes Flutuar{
+    0%{
+    transform: translateY(-24px);    
+    }
+    50%{
+    transform: translateY(-0px);    
+    }
+    100%{
+    transform: translateY(-24px);    
+    }
+}
+
+.caixa-presente.active{
+  animation: none;
+}
+
+.caixa-presente::before{
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 200px;
+    background: pink;
+    left: 124px;
+}
+
+.caixa-presente::after{
+    content: '';
+    position: absolute;
+    box-shadow: inset 0 10px rgba(0, 0, 0,.3);
+    width: 300px;
+    height: 200px;
+}
+
+.click{
+    position: absolute;
+    background: whitesmoke;
+    width: 340px;
+    height: 90px;
+    top: -90px;
+    left: -20px;
+    cursor: pointer;
+    z-index: 1;
+    transition: .3s ease;
+}
+.click.active{
+    transition-delay: 1s;
+    transform: translateY(-380px);
+}
+
+.click::before{
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 90px;
+    background: pink;
+    left: 144px;
+    z-index: 2;
+}
+
+.click::after{
+    content:'';
+    position: absolute;
+    width: 5px;
+    height: 0;
+    border-bottom: 60px solid pink;
+    border-top: 60px solid pink;
+    border-left: 0px solid transparent;
+    border-right: 60px solid transparent;
+    transform: rotate(-90deg);
+    top: -93px;
+    left: 136px;
+    z-index: 3;
+}
+
+.presente-conteiner .shadow{
+    content: '';
+    position: relative;
+    width: 340px;
+    height: 40px;
+    background: rgba(0, 0, 0,.4);
+    top: 100px;
+    border-radius: 50%;
+    left: -4px;
+    animation: Encerrar 4s ease infinite forwards;
+}
+
+@keyframes Encerrar {
+    0%{
+    transform: translateY(24px); 
+    scale: .7;   
+    }
+    50%{
+    transform: translateY(-0px);    
+    scale: 1;
+    }
+    100%{
+    transform: translateY(-24px);    
+    scale: .7;
+    }
+}
+.texto{
+    position: absolute;
+    top: 0;
+    width: 200px;
+    background: whitesmoke;
+    padding: 20px;
+    text-align: justify;
+    font-size: 20px;
+    color: black;
+    z-index: -1;
+    scale: 0;
+    transition: .3s ease;
+    transition-delay: 1s;
+}
+.texto.active{
+    scale: 1;
+    transform: translateY(-450px);
+}
+.texto.active2{
+    top: 0;
+    transition-delay: 0.1s;
+}

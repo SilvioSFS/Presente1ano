@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p class="title">
+        Feliz 1 Ano de Namoro
+    </p> 
+
+    <div id="login">
+
+        <form class="card">
+
+            <div class="card-header">
+                 
+                <center><h2>Login</h2></center>
+
+            </div>
+
+            <div class="card-content">
+
+                <div class="card-content-area">
+
+                    <label for="usuario">Usuário</label>
+
+                    <input type="text" id="usuario" autocomplete="off">
+
+                </div>
+
+                <div class="card-content-area">
+
+                    <label for="password">Senha</label>
+
+                    <input type="password" id="senha" autocomplete="off">
+
+                </div>
+
+            </div>
+
+            <div class="card-footer">
+
+                <input type="submit" value="Entrar" class="submit" onclick="Login(event)">
+ 
+
+            </div>
+
+        </form>
+       <script>
+        function Login(event){
+            var usuario = document.getElementById("usuario").value;
+            var senha = document.getElementById("senha").value;
+             event.preventDefault();
+            if(usuario == "Marina" && senha == "1109"){
+                alert("Seja Bem vinda meu amor");
+                window.location.href = "PaginaInicial.html";
+            }else{
+                alert("Mesmo Login da Ultima vez")
+            }
+        }
+       </script>
+    </div>
+</body>
+</html>

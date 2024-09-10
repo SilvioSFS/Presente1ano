@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para o Amor da Minha Vida </title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body id="presente">
+    <div class="presente-conteiner">
+      <div class="shadow">
+        
+      </div>
+      <div class="caixa-presente">
+        <div class="click">
+        
+        </div>
+      </div>
+      <div class="texto">
+        <strong>Querida Marina</strong>
+        <p>Hoje estamos completando 1 ano de namoro, 365 dias desde que vc fez minha vida muito melhor, obrigado por ser essa pessoa maravilhosa na minha vida, esse so foi o primeiro ano de muitos que passaremos lado a lado, te amo muito meu amor.</p>
+      </div>
+    </div>
+
+    <script>
+      const clicar = document.querySelector(".click")
+     const caixa = document.querySelector(".caixa-presente")
+      const Shadow = document.querySelector(".shadow")
+      const container = document.querySelector(".presente-conteiner")
+      const texto = document.querySelector(".texto")
+
+     clicar.addEventListener("click", ()=>{
+    if(clicar.className==="click"){
+        clicar.classList.add("active")
+        caixa.classList.add("active")
+        Shadow.classList.add("active")
+        container.classList.add("active")
+        texto.classList.add("active")
+        texto.classList.remove("active2")
+    }else{
+        clicar.classList.remove("active")
+        caixa.classList.remove("active")
+        Shadow.classList.remove("active")
+        container.classList.remove("active")
+        texto.classList.remove("active")
+        texto.classList.add("active2")
+    }
+   }) 
+     </script>
+</body>
+</html>
